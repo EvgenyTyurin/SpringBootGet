@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!-- Simple text from model -->>      
+<h3 th:text="${message}"></h3>
+
+<p>Choose your wraps:</p>
+<!-- Get list from model -->
+<div th:each="wrap : ${wraps}">
+  <input name="wraps_input" type="checkbox" th:value="${wrap}"/>
+  <span th:text="${wrap}">INGREDIENT</span><br/>
+</div>
+</html>      
